@@ -15,6 +15,7 @@ public class RomanNumberConverter {
 
     enum RomanSymbol {
         X("X", 10),
+        IX("IX", 9),
         V("V", 5),
         IV("IV", 4),
         I("I", 1);
