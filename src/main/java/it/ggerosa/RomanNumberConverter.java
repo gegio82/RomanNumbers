@@ -3,12 +3,10 @@ package it.ggerosa;
 public class RomanNumberConverter {
 
     public String toRoman(int decimal) {
-        if (decimal == 3) {
-            return "III";
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < decimal; i++) {
+            builder.append("I");
         }
-        if (decimal == 2) {
-            return "II";
-        }
-        return "I";
+        return builder.toString();
     }
 }
