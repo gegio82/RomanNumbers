@@ -4,6 +4,10 @@ public class RomanNumberConverter {
 
     public String toRoman(int decimal) {
         StringBuilder builder = new StringBuilder();
+        if (decimal >= 10) {
+            builder.append("X");
+            decimal -= 10;
+        }
         if (decimal >= 5) {
             builder.append("V");
             decimal -= 5;
