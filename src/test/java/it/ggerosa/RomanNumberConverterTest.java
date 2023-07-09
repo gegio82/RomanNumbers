@@ -1,6 +1,7 @@
 package it.ggerosa;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -8,13 +9,10 @@ class RomanNumberConverterTest {
 
     private final RomanNumberConverter converter = new RomanNumberConverter();
 
-    @Test
-    void canConvertNumber1() {
-        assertThat(converter.toRoman(1)).isEqualTo("I");
+    @ParameterizedTest
+    @CsvSource({"1, I", "2, II"})
+    void canConvertNumber1(int decimal, String expectedRoman) {
+        assertThat(converter.toRoman(decimal)).isEqualTo(expectedRoman);
     }
 
-    @Test
-    void canConvertNumber2() {
-        assertThat(converter.toRoman(2)).isEqualTo("II");
-    }
 }
