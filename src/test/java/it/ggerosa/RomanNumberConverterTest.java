@@ -14,7 +14,8 @@ class RomanNumberConverterTest {
             "1, I",
             "2, II",
             "3, III",
-            "5, V"})
+            "5, V",
+            "6, VI"})
     void canConvertNumber1(int decimal, String expectedRoman) {
         assertThat(converter.toRoman(decimal)).isEqualTo(expectedRoman);
     }
