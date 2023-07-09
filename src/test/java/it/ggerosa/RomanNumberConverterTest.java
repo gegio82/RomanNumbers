@@ -10,7 +10,7 @@ class RomanNumberConverterTest {
     private final RomanNumberConverter converter = new RomanNumberConverter();
 
     @ParameterizedTest
-    @CsvSource({"1, I", "2, II"})
+    @CsvSource({"1, I", "2, II", "3, III"})
     void canConvertNumber1(int decimal, String expectedRoman) {
         assertThat(converter.toRoman(decimal)).isEqualTo(expectedRoman);
     }
